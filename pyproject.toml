@@ -7,7 +7,11 @@ authors = [
     { name = "Kevin Hernandez", email = "kevinhernem@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "fastapi>=0.129.0",
+    "pydantic>=2.12.5",
+    "uvicorn>=0.40.0",
+]
 
 [project.scripts]
 ponpon = "ponpon:main"
@@ -15,3 +19,38 @@ ponpon = "ponpon:main"
 [build-system]
 requires = ["uv_build>=0.9.18,<0.10.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.15.1",
+    "ty>=0.0.17",
+]
+
+[tool.ruff]
+# 対象のPythonバージョン
+target-version = "py312"
+
+# 1行の最大文字数
+line-length = 100
+
+[tool.ruff.lint]
+# 有効にするルール
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "ARG", # flake8-unused-arguments
+    "SIM", # flake8-simplify
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff.format]
+quote-style = "double"
+line-ending = "auto"
