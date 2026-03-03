@@ -1,9 +1,8 @@
 import pygame
 import pygame.camera
 
+from ponpon.infra.config import SCREEN_SIZE
 from ponpon.tracking.camera import init_camera
-
-SCREEN_SIZE = (1280, 720)
 
 
 def main() -> None:

@@ -1,6 +1,6 @@
 import pygame.camera
 
-from ponpon.app.main import SCREEN_SIZE
+from ponpon.infra.config import SCREEN_SIZE
 
 
 def init_camera() -> pygame.camera.Camera | None:
