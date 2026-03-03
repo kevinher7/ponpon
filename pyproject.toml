@@ -8,9 +8,8 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "fastapi>=0.129.0",
     "pydantic>=2.12.5",
-    "uvicorn>=0.40.0",
+    "pygame-ce (>=2.5.7,<3.0.0)",
 ]
 
 [project.scripts]
