@@ -10,6 +10,7 @@ requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.12.5",
     "pygame-ce (>=2.5.7,<3.0.0)",
+    "opencv-python (>=4.13.0.92,<5.0.0.0)",
 ]
 
 [project.scripts]
